@@ -29,10 +29,10 @@ export const initMongooseVideoModel = async () => {
 		  author: String,
 		  thumbnail: String,
 		  author_thumbnail: String,
-		  transcript: String,
-		  $vector: {
+		//   transcript: String,
+		  vector: {
 			type: [Number],
-			validate: (vector) => vector && vector.length === 1536,
+			// validate: (vector) => vector && vector.length === 1536,
 		  },
 		},
 		{

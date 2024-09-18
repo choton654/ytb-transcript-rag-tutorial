@@ -17,6 +17,7 @@ export const generateEmbedings = async (prompt) => {
     //     model: 'sentence-transformers/all-MiniLM-L6-v2',
     //     inputs: prompt,
     //   });
+    //   return output1 
 
 
     
@@ -26,7 +27,7 @@ export const generateEmbedings = async (prompt) => {
     const output1 = await extractor(prompt, { pooling: 'mean', normalize: true });
 
 
-      return output1
+      return output1 && Object.values(output1.data)
 }
 
 
