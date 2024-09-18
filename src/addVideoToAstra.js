@@ -28,7 +28,7 @@ export const addVideoToAstra = async (url) => {
 			  ...videoInfo,
 			  url: videoUrl,
 			//   transcript,
-			  vector: vector
+			  $vector: vector
 		  })
 		  console.log("Video inserted into the database");
 		  return {

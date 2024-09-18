@@ -30,15 +30,15 @@ export const initMongooseVideoModel = async () => {
 		  thumbnail: String,
 		  author_thumbnail: String,
 		//   transcript: String,
-		  vector: {
+		  $vector: {
 			type: [Number],
-			// validate: (vector) => vector && vector.length === 1536,
+			validate: (vector) => vector && vector.length === 384,
 		  },
 		},
 		{
 		  collectionOptions: {
 			vector: {
-			  size: 1536,
+			  size: 384, // size must be same as inserted vector size
 			  function: "cosine",
 			},
 		  },

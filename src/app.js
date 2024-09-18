@@ -22,8 +22,8 @@ app.get('/', async (req, res) => {
     // 'https://www.youtube.com/watch?v=aO1-6X_f74M'
     // const transcriptTxt = await getYoutubeTranscript('https://www.youtube.com/watch?v=QdDoFfkVkcw')
     // const embds = await generateEmbedings(transcriptTxt)
-    const dbData =  await addVideoToAstra('https://www.youtube.com/watch?v=QdDoFfkVkcw')
-    console.log('---dbData---',dbData);
+    const dbData =  await addVideoToAstra('https://www.youtube.com/watch?v=qN_2fnOPY-M')
+    // console.log('---dbData---',embds);
     // var wstream = fs.createWriteStream('merge.txt');
     // wstream.write(transcriptTxt);
     res.status(200).json({dbData})
